@@ -16,7 +16,11 @@ concurrency:
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
 
     steps:
       - name: Check out repository
@@ -27,8 +31,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Download and convert CSV
-        run: python scripts/build_data.py
+      - name: Download and convert HK CSV
+        run: python scripts/build_datahk.py
+
+      - name: Download and convert HK budget CSV
+        run: python scripts/build_budgethk.py
+
+      - name: Download and convert FY27 FX CSV
+        run: python scripts/build_fy27fx.py
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
