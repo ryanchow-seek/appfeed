@@ -37,6 +37,13 @@ jobs:
       - name: Download and convert HK budget CSV
         run: python scripts/build_budgethk.py
 
+      - name: Download and convert SG CSV
+        run: python scripts/build_datasg.py
+
+      - name: Download and convert SG budget CSV
+        run: python scripts/build_budgetSG.py
+
+
       - name: Download and convert FY27 FX CSV
         run: python scripts/build_fy27fx.py
 
