@@ -3,7 +3,7 @@ name: Refresh and Deploy App Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "30 * * * *"
 
 permissions:
   contents: read
