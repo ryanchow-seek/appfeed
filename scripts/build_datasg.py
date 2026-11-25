@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 SOURCE_URL = (
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRJaZ3QkDdATCqoCCyfgbhvNPVd42xSY-0zF7h71wcFAGppk3DQzau2wyTAc7JJo3M7PD9Pc-2oPTfy/pub?gid=1435379442&single=true&output=csv"
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRJaZ3QkDdATCqoCCyfgbhvNPVd42xSY-0zF7h71wcFAGppk3DQzau2wyTAc7JJo3M7PD9Pc-2oPTfy/pub?gid=1607938452&single=true&output=csv"
 )
 
 request = Request(SOURCE_URL, headers={"User-Agent": "Mozilla/5.0"})
