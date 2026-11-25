@@ -25,5 +25,5 @@ payload = {
     "rows": rows,
 }
 
-with open("docs/budgetsg.json", "w", encoding="utf-8") as file:
+with open("docs/datasg.json", "w", encoding="utf-8") as file:
     json.dump(payload, file, ensure_ascii=False, separators=(",", ":"))
